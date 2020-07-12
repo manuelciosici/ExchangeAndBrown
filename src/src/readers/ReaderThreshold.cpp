@@ -11,8 +11,9 @@ const Corpus ReaderThreshold::reorderCorpus(const Corpus &corpus, const word_typ
     Corpus orderedCorpus;
     unordered_map<word_type, word_type> idMappings;
     word_type nextID = 0;
+    float thr = (float) thresholdVal / (float)corpus.corpusLength;
     for (word_type wordID = 0; wordID < corpus.vocabularySize; ++wordID) {
-        if (corpus.pl[wordID] >= thresholdVal) {
+        if (corpus.pl[wordID] >= thr) {
             const word_type idForCurrentWord = nextID;
             nextID++;
             idMappings.insert({wordID, idForCurrentWord});

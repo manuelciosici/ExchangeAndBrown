@@ -53,5 +53,12 @@ const Corpus ReaderThreshold::reorderCorpus(const Corpus &corpus, const word_typ
             }
         }
     }
+//    Update pl and pr in case if not strict
+    if (!strict) {
+        for (word_type wordID = 0; wordID < orderedCorpus.vocabularySize; ++wordID) {
+            orderedCorpus.pl[wordID] /= orderedCorpus.corpusLength;
+            orderedCorpus.pr[wordID] /= orderedCorpus.corpusLength;
+        }
+    }
     return orderedCorpus;
 }

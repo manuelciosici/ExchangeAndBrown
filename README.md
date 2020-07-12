@@ -1,8 +1,8 @@
 ## Exchange and Brown
 
-Version 0.1
+Version 0.2
 
-(c) 2015 - 2018 Manuel R. Ciosici and UNSILO.com
+(c) 2015 - 2020 Manuel R. Ciosici and UNSILO.com
 
 -------------------------------------------
 ### Table of Contents 
@@ -19,6 +19,28 @@ Version 0.1
 ### Introduction
 
 This repository contains software for clustering words based on their distributional similarity using Brown clustering, Exchange or a combination of the two.
+
+If you use the code, please cite the paper:
+
+<pre>
+	<code>
+@inproceedings{ciosici-etal-2020-accelerated,
+    title = "Accelerated High-Quality Mutual-Information Based Word Clustering",
+    author = "Ciosici, Manuel R.  and
+      Assent, Ira  and
+      Derczynski, Leon",
+    booktitle = "Proceedings of The 12th Language Resources and Evaluation Conference",
+    month = may,
+    year = "2020",
+    address = "Marseille, France",
+    publisher = "European Language Resources Association",
+    url = "https://www.aclweb.org/anthology/2020.lrec-1.303",
+    pages = "2491--2496",
+    language = "English",
+    ISBN = "979-10-95546-34-4",
+}
+	</code>
+</pre>
 
 ------------------------------------
 ### Building
@@ -84,7 +106,7 @@ Runs the Brown algorithm on top of the binary corpus file. It will output both a
 
 > ./exchange_runner --help
 
-Allows you to create clusters using Exchange. The difference between EXCHANGE and EXCHANGE_STEPS is that EXCHANGE_STEPS outputs the clustering at the end of every single iteration which allows for model selection.
+Allows you to create clusters using Exchange. The difference between `EXCHANGE` and `EXCHANGE_STEPS` is that `EXCHANGE_STEPS` outputs the clustering at the end of every single iteration which allows for model selection.
 
 ###### Brown clustering on top of Exchange
 
